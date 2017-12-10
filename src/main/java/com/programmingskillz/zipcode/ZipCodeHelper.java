@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public final class ZipCodeHelper {
+public class ZipCodeHelper {
 
   /**
    * Don't let anyone instantiate this class.
