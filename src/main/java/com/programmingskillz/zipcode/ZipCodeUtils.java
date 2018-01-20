@@ -8,12 +8,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public class ZipCodeHelper {
+public class ZipCodeUtils {
 
   /**
    * Don't let anyone instantiate this class.
    */
-  private ZipCodeHelper() {
+  private ZipCodeUtils() {
     throw new AssertionError("Helper class");
   }
 
@@ -65,18 +65,18 @@ public class ZipCodeHelper {
   }
 
   /**
-   * Provides the string array of Regular Expressions
+   * Provides an array of Regular Expressions
    * @return a String array of Regular Expressions
    */
-  public static String[] getRegExesArray() {
+  public static String[] getRegExArray() {
     return zipCodeRegExes.values().toArray(new String[0]);
   }
 
   /**
-   * Provides the list of strings of Regular Expressions
+   * Provides a list of Regular Expressions
    * @return a List of Strings of Regular Expressions
    */
-  public static List<String> getRegExesList() {
+  public static List<String> getRegExList() {
     return new ArrayList<>(zipCodeRegExes.values());
   }
 
@@ -84,7 +84,7 @@ public class ZipCodeHelper {
    * Provides the java.util.regex.Pattern array of Regular Expressions
    * @return a java.util.regex.Pattern array of Regular Expressions
    */
-  public static Pattern[] getZipCodePatternsArray() {
+  public static Pattern[] getRegExPatternsArray() {
     return zipCodePatterns.values().toArray(new Pattern[0]);
   }
 
@@ -92,7 +92,7 @@ public class ZipCodeHelper {
    * Provides the List of java.util.regex.Patterns of Regular Expressions
    * @return a List of java.util.regex.Patterns of Regular Expressions
    */
-  public static List<Pattern> getZipCodePatternsList() {
+  public static List<Pattern> getRegExPatternsList() {
     return new ArrayList<>(zipCodePatterns.values());
   }
 
@@ -101,6 +101,7 @@ public class ZipCodeHelper {
    * @param countryCode the ISO Country Code
    * @return the Zip Code Regular Expression as String per given country
    * or null if can't find regex per that country
+   * @throws IllegalArgumentException if countryCode is null, empty or blank
    */
   public static String getZipCodeRegEx(String countryCode) {
     Assert.hasText(countryCode, "'countryCode' must not be null, empty or blank");
@@ -112,6 +113,7 @@ public class ZipCodeHelper {
    * @param countryCode the ISO Country Code
    * @return the Zip Code Regular Expression as java.util.regex.Pattern per given country
    * or null if can't find regex per that country
+   * @throws IllegalArgumentException if countryCode is null, empty or blank
    */
   public static Pattern getZipCodePattern(String countryCode) {
     Assert.hasText(countryCode, "'countryCode' must not be null, empty or blank");
