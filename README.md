@@ -1,4 +1,4 @@
-# Zip Code Util
+# Zip Code Util: Utility class for International Zip Code validation
 
 International Zip Code validator library
 
