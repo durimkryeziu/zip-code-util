@@ -1,6 +1,6 @@
-# Zip Code Util: Utility class for International Zip Code validation
+# ZipCodeUtil: Utility class for International Zip Code validation
 
-International Zip Code validator library
+Lightweight Zip Code library which offers some convenience methods to work with international Zip Codes
 
 ## Usage
 ```java
