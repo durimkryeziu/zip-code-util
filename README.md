@@ -1,6 +1,6 @@
 # ZipCodeUtil: Utility class for International Zip Code validation
 
-[![Travis branch](https://img.shields.io/travis/durimkryeziu/zip-code-util/master.svg?style=flat-square)](https://travis-ci.org/durimkryeziu/zip-code-util)
+[![Travis branch](https://img.shields.io/travis/durimkryeziu/zip-code-util/master.svg?style=flat-square)](https://travis-ci.org/durimkryeziu/zip-code-util) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/durimkryeziu/zip-code-util/blob/master/LICENSE)
 
 Lightweight Zip Code library which offers some convenience methods to work with international Zip Codes
 
