@@ -1,5 +1,7 @@
 # ZipCodeUtil: Utility class for International Zip Code validation
 
+[![Travis branch](https://img.shields.io/travis/durimkryeziu/zip-code-util/master.svg?style=flat-square)](https://travis-ci.org/durimkryeziu/zip-code-util)
+
 Lightweight Zip Code library which offers some convenience methods to work with international Zip Codes
 
 ## Usage
