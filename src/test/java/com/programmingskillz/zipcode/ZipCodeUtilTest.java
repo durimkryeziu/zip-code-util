@@ -92,4 +92,59 @@ public class ZipCodeUtilTest {
 
     zipCodeUtil.getZipCodePattern("      ");
   }
+
+  @Test
+  public void isValidReturnsTrueWhenZipCodeValidForGivenCountryCode() {
+    boolean valid = zipCodeUtil.isValid("XK", "14000");
+
+    assertThat(valid).isTrue();
+  }
+
+  @Test
+  public void isValidThrowsExceptionWhenCountryCodeIsNull() {
+    exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("'countryCode' must not be null, empty or blank");
+
+    zipCodeUtil.isValid(null, "14000");
+  }
+
+  @Test
+  public void isValidThrowsExceptionWhenCountryCodeIsEmpty() {
+    exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("'countryCode' must not be null, empty or blank");
+
+    zipCodeUtil.isValid("", "14000");
+  }
+
+  @Test
+  public void isValidThrowsExceptionWhenCountryCodeIsBlank() {
+    exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("'countryCode' must not be null, empty or blank");
+
+    zipCodeUtil.isValid("      ", "14000");
+  }
+
+  @Test
+  public void isValidThrowsExceptionWhenZipCodeIsNull() {
+    exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("'zipCode' must not be null, empty or blank");
+
+    zipCodeUtil.isValid("XK", null);
+  }
+
+  @Test
+  public void isValidThrowsExceptionWhenZipCodeIsEmpty() {
+    exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("'zipCode' must not be null, empty or blank");
+
+    zipCodeUtil.isValid("XK", "");
+  }
+
+  @Test
+  public void isValidThrowsExceptionWhenZipCodeIsBlank() {
+    exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("'zipCode' must not be null, empty or blank");
+
+    zipCodeUtil.isValid("XK", "     ");
+  }
 }
