@@ -147,4 +147,18 @@ public class ZipCodeUtilTest {
 
     zipCodeUtil.isValid("XK", "     ");
   }
+
+  @Test
+  public void isValidReturnsFalseWhenNoRegexFoundForGivenCountryCode() {
+    boolean valid = zipCodeUtil.isValid("ABC", "14000");
+
+    assertThat(valid).isFalse();
+  }
+
+  @Test
+  public void isValidReturnsFalseWhenZipCodeIsInvalidForGivenCountryCode() {
+    boolean valid = zipCodeUtil.isValid("XK", "84000");
+
+    assertThat(valid).isFalse();
+  }
 }
