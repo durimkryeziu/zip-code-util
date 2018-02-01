@@ -13,6 +13,8 @@ import java.util.regex.Pattern;
  *
  * Patterns are taken from Google's open-source address metadata site:
  * https://chromium-i18n.appspot.com/ssl-address
+ *
+ * @author Durim Kryeziu
  */
 public enum ZipCodeUtil {
 
