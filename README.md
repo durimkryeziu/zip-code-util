@@ -9,7 +9,7 @@ Lightweight Zip Code library which offers some convenience methods to work with 
 ZipCodeUtil zipCodeUtil = ZipCodeUtil.getInstance();
 
 // Get Regular Expression for Ireland:
-String regex = zipCodeUtil.getZipCodeRegex("IE"); // [\dA-Z]{3} ?[\dA-Z]{4}
+String regex = zipCodeUtil.getZipCodeRegexBy("IE"); // [\dA-Z]{3} ?[\dA-Z]{4}
 
 // Get pre-compiled Pattern for Ireland:
 Pattern pattern = zipCodeUtil.getZipCodePattern("IE");
@@ -18,7 +18,7 @@ boolean isValid = matcher.matches(); // true
 
 // Validate a Zip Code:
 if (zipCodeUtil.isValid("GB", "GU16 7HF")) {
-  // Yep! Valid United Kingdom Zip Code
+  // code
 }
 ```
 

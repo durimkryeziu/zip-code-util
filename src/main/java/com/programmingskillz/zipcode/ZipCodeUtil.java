@@ -8,11 +8,11 @@ import java.util.regex.Pattern;
 
 /**
  * Utility which helps you work with international Zip Codes. Functionality includes retrieving Zip Code
- * regular expression as String per ISO country code, retrieving Zip Code as java.util.Pattern per ISO
- * country code and validation a given Zip Code.
+ * regular expression as {@code String} per ISO country code, retrieving Zip Code as {@code java.util.Pattern} per ISO
+ * country code and validation of a given Zip Code.
  *
- * Patterns are taken from Google's open-source address metadata site:
- * https://chromium-i18n.appspot.com/ssl-address
+ * <p> Patterns are taken from Google's open-source query address data
+ * <a href="https://chromium-i18n.appspot.com/ssl-address" target="_blank">website</a>.
  *
  * @author Durim Kryeziu
  */
@@ -220,7 +220,7 @@ public enum ZipCodeUtil {
   }
 
   /**
-   * Provides you with the Regular Expressions map per ISO Country code to manipulate with it on your way
+   * Provides you with the Regular Expressions map per ISO Country code to manipulate with it the way you want
    * @return the unmodifiable String Regular Expressions map
    */
   public Map<String, String> getRegularExpressionsMap() {
@@ -228,7 +228,7 @@ public enum ZipCodeUtil {
   }
 
   /**
-   * Provides you with the Regular Expressions map per ISO Country code to manipulate with it on your way
+   * Provides you with the {@code java.util.regex.Pattern}s map per ISO Country code to manipulate with it the way you want
    * @return the unmodifiable pre-compiled java.util.regex.Patterns map
    */
   public Map<String, Pattern> getPatternsMap() {
