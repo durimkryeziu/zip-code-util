@@ -5,11 +5,32 @@
 
     <groupId>com.programmingskillz</groupId>
     <artifactId>zip-code-util</artifactId>
-    <version>0.1</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Zip Code Util</name>
+    <description>Utility class for International Zip Code validation</description>
     <url>https://github.com/durimkryeziu/zip-code-util</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>durimkryeziu</id>
+            <name>Durim Kryeziu</name>
+            <url>https://github.com/durimkryeziu</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/durimkryeziu/zip-code-util/tree/master</url>
+        <connection>scm:git:https://github.com/durimkryeziu/zip-code-util.git</connection>
+    </scm>
 
     <properties>
         <junit.version>4.12</junit.version>
