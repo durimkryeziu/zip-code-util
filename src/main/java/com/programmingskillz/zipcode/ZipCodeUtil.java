@@ -1,5 +1,8 @@
 package com.programmingskillz.zipcode;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -243,7 +246,7 @@ public enum ZipCodeUtil {
    * @throws IllegalArgumentException if countryCode is null, empty or blank
    */
   public String getZipCodeRegex(String countryCode) {
-    if (countryCode == null || countryCode.trim().isEmpty()) {
+    if (isNull(countryCode) || countryCode.trim().isEmpty()) {
       throw new IllegalArgumentException("'countryCode' must not be null, empty or blank");
     }
     return REGULAR_EXPRESSIONS.get(countryCode.toUpperCase());
@@ -257,7 +260,7 @@ public enum ZipCodeUtil {
    * @throws IllegalArgumentException if countryCode is null, empty or blank
    */
   public Pattern getZipCodePattern(String countryCode) {
-    if (countryCode == null || countryCode.trim().isEmpty()) {
+    if (isNull(countryCode) || countryCode.trim().isEmpty()) {
       throw new IllegalArgumentException("'countryCode' must not be null, empty or blank");
     }
     return PATTERNS.get(countryCode.toUpperCase());
@@ -271,14 +274,14 @@ public enum ZipCodeUtil {
    * @throws IllegalArgumentException if countryCode or zipCode is null, empty or blank
    */
   public boolean isValid(String countryCode, String zipCode) {
-    if (countryCode == null || countryCode.trim().isEmpty()) {
+    if (isNull(countryCode) || countryCode.trim().isEmpty()) {
       throw new IllegalArgumentException("'countryCode' must not be null, empty or blank");
     }
-    if (zipCode == null || zipCode.trim().isEmpty()) {
+    if (isNull(zipCode) || zipCode.trim().isEmpty()) {
       throw new IllegalArgumentException("'zipCode' must not be null, empty or blank");
     }
     Pattern pattern = PATTERNS.get(countryCode);
-    if (pattern != null) {
+    if (nonNull(pattern)) {
       Matcher matcher = pattern.matcher(zipCode);
       return matcher.matches();
     }
