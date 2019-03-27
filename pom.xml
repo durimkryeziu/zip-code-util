@@ -36,7 +36,7 @@
         <junit.version>4.12</junit.version>
         <jacoco.version>0.8.0</jacoco.version>
         <coveralls.version>4.3.0</coveralls.version>
-        <assertj.version>3.9.0</assertj.version>
+        <assertj.version>3.12.2</assertj.version>
         <commons.lang.version>3.7</commons.lang.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
