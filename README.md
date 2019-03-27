@@ -30,7 +30,7 @@ AC, AD, AF, AI, AL, AM, AR, AS, AT, AU, AX, AZ, BA, BB, BD, BE, BG, BH, BL, BM, 
 ## License
 MIT License
 
-Copyright (c) 2017 - 2018 Durim Kryeziu
+Copyright (c) 2017 - 2019 Durim Kryeziu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
